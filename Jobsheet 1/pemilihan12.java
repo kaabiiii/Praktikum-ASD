@@ -4,6 +4,8 @@ public class pemilihan12 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
+        System.out.println("Program Menghitung Nilai Akhir");
+        System.out.println("=============================");
         System.out.print("Masukkan nilai tugas: ");
         double tugas = scanner.nextDouble();
         System.out.print("Masukkan nilai kuis: ");
@@ -36,14 +38,19 @@ public class pemilihan12 {
             } else {
                 nilaiHuruf = "E";
             }
-        if ((nilaiHuruf.equals("A") || nilaiHuruf.equals("B+") || nilaiHuruf.equals("B") || nilaiHuruf.equals("C+") || nilaiHuruf.equals("C"))) {
-            System.out.println("LULUS");
-        }else{
-            System.out.println("TIDAK LULUS");
-        }
+            System.out.println("=============================");
+            System.out.println("=============================");
+
             System.out.println("Nilai Akhir: " + nilaiAkhir);
             System.out.println("Nilai Huruf: " + nilaiHuruf);
             
+            System.out.println("=============================");
+            System.out.println("=============================");
+            if ((nilaiHuruf.equals("A") || nilaiHuruf.equals("B+") || nilaiHuruf.equals("B") || nilaiHuruf.equals("C+") || nilaiHuruf.equals("C"))) {
+                System.out.println("SELAMAT ANDA LULUS");
+            }else{
+                System.out.println("TIDAK LULUS");
+            }
         }
     }
 }
