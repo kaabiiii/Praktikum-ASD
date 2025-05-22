@@ -1,6 +1,7 @@
 public class StackTugasMahasiswa12 {
     Mahasiswa12[] stack;
     int top;
+    int bottom;
     int size;
 
     public StackTugasMahasiswa12(int size){
@@ -51,8 +52,27 @@ public class StackTugasMahasiswa12 {
             return null;
         }
     }
+    public Mahasiswa12 peekbottom(){
+        if (!isEmpty()) {
+            return stack[bottom];
+        }else{
+            System.out.println("Stack kosong! Tidak ada tugas yang dikumpulkan");
+            return null;
+        }
+    }
+    public int hitungJmlTugas(){
+        int count = 0;
+        if (!isEmpty()) {
+            for (int i = top; i >= 0; i--) {
+                count++;
+            }
+        }else {
+            System.out.println("Tidak ada tugas yang ditambahkan");
+        }
+        return count;
+    }
     public void print(){
-        for (int i = 0; i <= top; i++) {
+        for (int i = top; i >= 0; i++) {
             System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);
 
         }
